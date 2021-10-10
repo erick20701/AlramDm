@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFm">
+    <fragment
+        android:id="@+id/mainFm"
+        android:name="ALDM.mainFm"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFm_to_mainActivityinfit2"
+            app:destination="@id/mainActivityinfit" />
+        <action
+            android:id="@+id/action_mainFm_to_demnguoc2"
+            app:destination="@id/demnguoc2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainActivityinfit"
+        android:name="ALDM.MainActivityinfit"
+        android:label="activity_main_activityinfit"
+        tools:layout="@layout/activity_main_activityinfit" >
+        <action
+            android:id="@+id/action_mainActivityinfit_to_mainFm2"
+            app:destination="@id/mainFm" />
+    </fragment>
+    <fragment
+        android:id="@+id/demnguoc2"
+        android:name="ALDM.demnguoc"
+        android:label="demnguoc"
+        tools:layout="@layout/demnguoc" >
+        <action
+            android:id="@+id/action_demnguoc2_to_mainFm"
+            app:destination="@id/mainFm" />
+    </fragment>
+</navigation>
